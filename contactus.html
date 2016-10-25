@@ -69,10 +69,10 @@
         	<nav>
 				<div id="cssmenu">
                 	<ul>
-                    	<li class="active"><a href="index.html">Home</a></li>
+                    	<li><a href="index.html">Home</a></li>
                         <li><a href="aboutus.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="contactus.html">contact us</a></li>
+                        <li class="active"><a href="contactus.html">contact us</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -80,78 +80,57 @@
     </div>
 </header>
 <div style="clear:both;"></div>
-<div id="banner_area">
-	<div class="site">
-    	<div id="banner_content_bg">
-        	<div id="banner_content_area">
-            	<span class="banner_orange_text">specialized </span><span class="banner_white_text">in </span><br /><span class="banner_white_text_bold">Rewinding & Overhauling of </span><br /><span class="banner_white_text">Motor & Generator</span>
-            </div>
-        </div>
-    </div>
-</div>
-<div style="clear:both;"></div>
 <div id="home_body_bg">
 	<div class="site">
-    	<div id="home_text_banner_bg"><span class="banner_white_text">The trusted </span><span class="banner_orange_text_bold">solution provider</span></div>
-        <div style="clear:both;"></div>
-        <div id="home_4blog_area">
-        	<div id="home_4blog_left_box">
-            	<a href="services.html#machining"><div id="home_4blog_first_box">
-                	<div id="home_4blog_box_content_area">
-                    	<div id="home_4blog_box_title">MACHINING & <br />FABRICATION</div>
-                        <div id="box_text_content_area">
-                        	<div id="box_textarea">RPM Electrical Engineering also provides services for the machining and fabrication...</div>
-                            <div id="box_arrow_area">></div>
-                        </div>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div></a>
-            </div>
-            <div id="home_4blog_right_box">
-            	<a href="services.html#dynamic"><div id="home_4blog_second_box">
-                	<div id="home_4blog_box_content_area">
-                    	<div id="home_4blog_box_title">DYNAMIC<br />BALANCING</div>
-                        <div id="box_text_content_area">
-                        	<div id="box_textarea">RPM Electrical Engineering, we can customise product solutions to satisfy our...</div>
-                            <div id="box_arrow_area">></div>
-                        </div>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div></a>
-            </div>
-            <div id="home_4blog_left_box">
-            	<a href="services.html#surge"><div id="home_4blog_third_box">
-                	<div id="home_4blog_box_content_area">
-                    	<div id="home_4blog_box_title">SURGE & HI-POT<br />TEST SERVICES</div>
-                        <div id="box_text_content_area">
-                        	<div id="box_textarea">We also provide after repair testing services such as Surge and Hi-Pot Testing...</div>
-                            <div id="box_arrow_area">></div>
-                        </div>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div></a>
-            </div>
-            <div id="home_4blog_right_box">
-            	<a href="services.html#rewinding"><div id="home_4blog_four_box">
-                	<div id="home_4blog_box_content_area">
-                    	<div id="home_4blog_box_title">REWINDING OF<br />ELECTRICAL MOTORS</div>
-                        <div id="box_text_content_area">
-                        	<div id="box_textarea">PM Electrical Engineering provides dismantling and re-installing services, including...</div>
-                            <div id="box_arrow_area">></div>
-                        </div>
-                    </div>
-                    <div style="clear:both;"></div>
-                </div></a>
-            </div>
-        </div>
-        <div style="clear:both;"></div>
         <div id="home_aboutus_area">
-        	<div id="home_aboutus_title"><span class="title_orange_bold">about </span><span class="title_orange">us</span></div>
-            <div id="home_aboutus_textarea">
-            	<p>Setup in the year 2000, RPM Electrical Engineering Pte Ltd has established itself as one of the stalwarts of electrical and mechanical engineering solutions in Singapore. We have built our reputation on reliable, committed and strong customer support. We provide equipment testing services, machining and fabrication, as well as being a stockist of motor accessories. As a forward-thinking company, we are ever catering to the needs of our partners, expanding our services to meet their needs.</p>
-                <p>In meeting our partners’ requirements, RPM Electrical Engineering customises our colutions for them. we present a unique, one-stop service provider to our partners, ensuring their needs and wants are met.</p>
+        	<div id="home_aboutus_title"><span class="title_orange_bold">enquiry </span><span class="title_orange">us</span></div>
+            <div id="inner_content_area">
+            	<div id="inner_full_area">
+                	<form action="http://ebasoft.com.sg/activamedia/admin/mailscript.asp" method="post" name='form1' id="form1">
+                        <input type="hidden" name="Subject" value="RPM ELECTRICAL ENGINEERING PTE LTD | RPM MECHANICAL PTE LTD - Enquiry Form" />
+                        <input type="hidden" name="SendTo" value="thinwah@activamedia.com.sg" />
+                        <input type="hidden" name="Failed" value="contactus.html" />
+                        <input type="hidden" name="Success" value="contact-success.html" />
+                        <input type="hidden" name="URL" value="www.rpmelectrical.com.sg" />
+                            <div id="row">
+                                <div id="col_1">Your Name <span style="color:#ff0000;">*</span></div>
+                                <div id="col_1_space">:</div>
+                                <div id="col_2"><input id="name" class="name" name="name" size="32" type="text"/></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div id="row">
+                                <div id="col_1">Contact Phone Number <span style="color:#ff0000;">*</span></div>
+                                <div id="col_1_space">:</div>
+                                <div id="col_2"><input id="mobile" onkeypress="return isNumberKey(event)" name="mobile" size="32" type="text"/></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div id="row">
+                                <div id="col_1">Your Email <span style="color:#ff0000;">*</span></div>
+                                <div id="col_1_space">:</div>
+                                <div id="col_2"><input id="email" name="email" size="32" type="text"/></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div id="row">
+                                <div id="col_1">Message</div>
+                                <div id="col_1_space">:</div>
+                                <div id="col_2"><textarea rows="3" cols="30" id="message" name="message"></textarea></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div id="row">
+                                <div id="col_1_1"></div>
+                                <div id="col_2" style="text-align:left;"><div id="captchadiv"></div></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <div id="row">
+                                <div id="col_1"><span style="color:#ff0000;">* Required fields</span></div>
+                                <div id="col_1_space"></div>
+                                <div id="col_2"><input name="submit" type="submit" id="submitBtn" value="Submit" /></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
+					</form>
+                </div>
             </div>
-            <div id="home_readmore"><a href="aboutus.html" class="readmore_blue">read more</a></div>
             <div style="clear:both;"></div>
         </div>
         <div style="clear:both;"></div>
