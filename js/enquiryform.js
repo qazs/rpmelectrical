@@ -112,6 +112,7 @@ jQuery(document).ready(function() {
                            }else{
                              if (grecaptcha.getResponse() == ""){
                                   alert("Invalid captcha verification, please try again");
+                                  return pass;
                               } else {
                                   $( "#form1" ).submit();
                               }
