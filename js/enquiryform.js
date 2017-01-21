@@ -110,7 +110,7 @@ jQuery(document).ready(function() {
                                   alert("Please enter a valid Email Address");
                                   return pass;
                            }else{
-                             return true;
+                             $( "#form1" ).submit();
                               //  var inputparam = (jQuery("#captcha").length > 0) ? jQuery("#captcha").val() : "";
                               // validateCaptchaCode(inputparam);
                               // return pass;
