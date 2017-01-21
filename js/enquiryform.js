@@ -110,7 +110,12 @@ jQuery(document).ready(function() {
                                   alert("Please enter a valid Email Address");
                                   return pass;
                            }else{
-                             $( "#form1" ).submit();
+                             if (grecaptcha.getResponse() == ""){
+                                  alert("Invalid captcha verification, please try again");
+                              } else {
+                                  $( "#form1" ).submit();
+                              }
+
                               //  var inputparam = (jQuery("#captcha").length > 0) ? jQuery("#captcha").val() : "";
                               // validateCaptchaCode(inputparam);
                               // return pass;
