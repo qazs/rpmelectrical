@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -7,7 +7,7 @@
 function isNumberKey(evt) {
                 var charCode = (evt.which) ? evt.which : evt.keyCode;
                 // Added to allow decimal, period, or delete
-                if (charCode == 110 || charCode == 190 || charCode == 46) 
+                if (charCode == 110 || charCode == 190 || charCode == 46)
                         return true;
 
                 if (charCode > 31 && (charCode < 48 || charCode > 57)) {
@@ -15,14 +15,14 @@ function isNumberKey(evt) {
                     }
 
                         return true;
-} 
-                
-                
-function validateEmail(mail){  
-                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {  
+}
+
+
+function validateEmail(mail){
+                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
                           return true;
-                        }  
-                            return false; 
+                        }
+                            return false;
 }
 
 //Toggle Captcha
@@ -41,14 +41,14 @@ jQuery(document).ready(function() {
     var finalurl = window.location.origin;
     var domain = window.location.host;
     if(domain=="localhost"){
-              partfile="/";       
+              partfile="/";
         }else{
             partfile= "/";
         }
-        
+
           finalurl =  finalurl + partfile;
      //Here the website Sitekey needs to be inserted
-     
+
      function sendForm(){
         pass=true;
         ++count;
@@ -57,8 +57,8 @@ jQuery(document).ready(function() {
               setTimeout(function(){  $("#submitBtn").trigger('click'); }, 2000);
         }
      }
-     
-     
+
+
      function validateCaptchaCode(captchadata){
                     var serializedData = "";
                     var ajaxurl = finalurl + "captcha/getcaptcha.php";
@@ -66,9 +66,9 @@ jQuery(document).ready(function() {
                             if(isGoogleCaptcha){
                                     serializedData = jQuery("#form1").serialize();
                                    ajaxurl = finalurl + "captcha/validation.php";
-                            }    
-							
-						                                 
+                            }
+
+
                                         jQuery.ajax({
                                         url: ajaxurl,
                                         type: "post",
@@ -94,15 +94,15 @@ jQuery(document).ready(function() {
 
                                  return pass;
                    }
-    
-    
+
+
                     jQuery("#submitBtn").click(function(){
                             if(jQuery("#name").val()==""){
                               alert("Please enter you Name");
                                 return pass;
                            }else if(jQuery("#mobile").val()==""){
                                 alert("Please enter you Contact Number");
-                                 return pass;							
+                                 return pass;
                            }else if(jQuery("#email").val()==""){
                                  alert("Please enter you Email Address");
                                  return pass;
@@ -110,12 +110,13 @@ jQuery(document).ready(function() {
                                   alert("Please enter a valid Email Address");
                                   return pass;
                            }else{
-                               var inputparam = (jQuery("#captcha").length > 0) ? jQuery("#captcha").val() : ""; 
-                              validateCaptchaCode(inputparam);
-                              return pass;
+                             return true;
+                              //  var inputparam = (jQuery("#captcha").length > 0) ? jQuery("#captcha").val() : "";
+                              // validateCaptchaCode(inputparam);
+                              // return pass;
                            }
                        });
-        if(!isGoogleCaptcha){  
+        if(!isGoogleCaptcha){
           var captchaURL =  finalurl + "captcha/CaptchaSecurityImages.php?width=140&amp;height=35&amp;characters=6";
           var refreshButtonImage = finalurl + "captcha/refresh-button.png";
           var rand =  Math.random();
@@ -128,7 +129,7 @@ jQuery(document).ready(function() {
       }
 });
 
-         
+
  if(isGoogleCaptcha){
 var captchaSitekey = "6LfrWyETAAAAALQUnxDtf2y_rQ6eAXpLfYhQ0JLJ";
 if(domain=="activawebdesigner.com.sg"){
@@ -142,4 +143,4 @@ if(domain=="activawebdesigner.com.sg"){
         });
 
     }
- } 
+ }
